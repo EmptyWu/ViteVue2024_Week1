@@ -1,5 +1,14 @@
-# Vue 3 + Vite
+# Vue 3 + Vite + Dockerfile + docker-compose
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+1. 使用 nodejs 20 版本進行開發
+2. 預設 npm run dev -- --host 對外開啟PORT:5173 
+3. 預設安裝 git ，並且可綁定ssh_key
+4. Dockerfile 啟動時預設啟用npm install 且放入volume
+5. 預設git mail與name 
+```sh
+    RUN git config --global user.email "chunhsing0921@gmail.com" && \
+    git config --global user.name "Emptywu"
+```
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Reference
+[Vite Configuration Reference](https://vitejs.dev/config/).

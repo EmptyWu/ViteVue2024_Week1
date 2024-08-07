@@ -8,7 +8,8 @@ services:
     volumes:
       - .:/app
       - node_modules:/app/node_modules
-      - npm-cache:/root/.npm
+      - .npm-cache:/app/.npm-cache
+      - .ssh:/root/.ssh
     environment:
       - NODE_ENV=development
 volumes:
