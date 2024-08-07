@@ -1,6 +1,10 @@
 
 FROM node:20
 
+RUN apt-get update && \
+    apt-get install -y git && \
+    apt-get clean
+
 #RUN npm install -g yarn
 RUN npm config set cache /app/.npm-cache --global
 
@@ -9,6 +13,7 @@ WORKDIR /app
 COPY package*.json ./
 
 RUN npm install
+RUN npm install gh-pages --save-dev
 #RUN yarn install
 
 COPY . .

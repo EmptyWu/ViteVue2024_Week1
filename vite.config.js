@@ -3,5 +3,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/ViteVue2024_Week1/',
   plugins: [vue()],
 })
