@@ -27,3 +27,4 @@ dist-ssr
 *.sw?
 id_*
 known_hosts.*
+.ssh
