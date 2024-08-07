@@ -1,0 +1,16 @@
+services:
+  app:
+    image: my-vue-app
+    container_name: vueapp
+    build: .
+    ports:
+      - "5170-5179:5170-5179"
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+      - npm-cache:/root/.npm
+    environment:
+      - NODE_ENV=development
+volumes:
+  npm-cache:
+  node_modules:

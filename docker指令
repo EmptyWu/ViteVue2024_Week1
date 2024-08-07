@@ -1,0 +1,1 @@
+docker run -it --name vueapp -v E:/docker/vuejs:/app -p 5173:5173 my-vue-app /bin/bash
